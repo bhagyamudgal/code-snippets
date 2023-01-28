@@ -1,4 +1,4 @@
-export const covertToBase64 = (file: any) => {
+export const convertToBase64 = (file: any) => {
     return new Promise((resolve, reject) => {
         const reader = new FileReader();
         reader.onloadend = () => {
