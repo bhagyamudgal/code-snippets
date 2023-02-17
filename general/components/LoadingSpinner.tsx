@@ -4,7 +4,7 @@ import React from "react";
 interface Props {
     loadingText?: string;
     size?: "xs" | "sm" | "md" | "lg" | "xl";
-    color: string;
+    color?: string;
 }
 
 function LoadingSpinner({
