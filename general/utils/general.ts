@@ -1,8 +1,10 @@
 export const isBase64 = (value: string) => {
     try {
-        const base64regex =
-            /^([A-Za-z0-9+/]{4})*([A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{2}==)?$/;
-        return base64regex.test(value);
+        // Convert the string to a Buffer using the Base64 encoding
+        const buffer = Buffer.from(value, "base64");
+
+        // Check if the buffer can be encoded back to the original string
+        return buffer.toString("base64") === value;
     } catch (error) {
         return false;
     }
